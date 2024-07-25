@@ -11,13 +11,34 @@
     <p>Criar uma função que multiplica dois números e retorna o resultado para uma variável.</p>
     <p id="resultado" style="font-weight: bold;"></p>
 
-    <script>
-        let x = multiplica(15,5);
-        document.getElementById("resultado").innerHTML = x;
+    <p>Digite os numeros que deseja multiplicar</p>
 
+    <input id="primeiro" type="text">
+    <input id="segundo" type="text">
+
+    <button onclick="calcular()"> confirmar</button>
+
+    <p id="results"></p>
+
+
+    <script>
+
+
+        function calcular(){
+        const primo = document.getElementById("primeiro").value;
+        const segun = document.getElementById("segundo").value;
+        let x = multiplica(primo, segun);
+
+        document.getElementById("results").innerHTML = x
+        
+       
         function multiplica(a, b){
             return a*b;
         }
+            
+
+        }
+
     </script>
 </body>
 </html>
